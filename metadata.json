@@ -1,0 +1,9 @@
+{
+  "name": "Explora Angola Prime",
+  "description": "A principal infraestrutura digital de turismo em Angola, começando pelas províncias da Huíla e Namibe. Marketplace de serviços turísticos, guia informativo e planeador inteligente de viagens.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
