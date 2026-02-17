@@ -1,11 +1,8 @@
-'use server';
-
-export const runtime = 'edge';
 
 import { GoogleGenAI } from "@google/genai";
 import { Language } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
 
 const languageMap: Record<Language, string> = {
   pt: 'Português de Angola',
@@ -41,7 +38,7 @@ export async function generateItinerary(params: {
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash',
+      model: 'gemini-3-flash-preview',
       contents: prompt,
     });
     return response.text;
